@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Python Lab — Learn, Code, Build</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/material-darker.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="brand">🐍 Python Lab <small>Learn, Code, Build</small></div>
+  <select id="topicSelect" hidden aria-label="Topic"></select>
+  <div class="stats">
+    <span id="level"></span>
+    <div class="bar" title="Progress to next level"><i id="xpBar"></i></div>
+    <span id="xp"></span>
+    <span id="pyStatus" class="pill">Loading Python…</span>
+  </div>
+</header>
+<div class="layout">
+  <nav id="nav" aria-label="Lesson stages"></nav>
+  <main>
+    <section id="view"></section>
+    <section id="workspace" hidden>
+      <div class="card" id="task"></div>
+      <div id="editorBox"></div>
+      <div class="row">
+        <button id="runBtn" class="primary">▶ Run code</button>
+        <button id="testBtn">✅ Check my solution</button>
+        <button id="hintBtn">💡 Show a hint</button>
+        <button id="resetBtn">↺ Reset code</button>
+        <button id="clearBtn">Clear output</button>
+        <button id="wipeBtn">🗑 Delete files</button>
+      </div>
+      <details id="stdinBox"><summary>Input for <code>input()</code> (one line per call)</summary>
+        <textarea id="stdin" rows="3" spellcheck="false"></textarea></details>
+      <div id="hints"></div>
+      <pre id="output" class="term" aria-live="polite">Output appears here.</pre>
+      <div id="files"></div>
+      <div id="results" aria-live="polite"></div>
+    </section>
+  </main>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="data/lessons.js"></script>
+<script src="js/progress.js"></script>
+<script src="js/python-runner.js"></script>
+<script src="js/lesson-engine.js"></script>
+<script src="js/challenge-engine.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
